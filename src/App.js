@@ -1,23 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Login from 'pages/Login';
-import Main from 'pages/Main';
-import Register from 'pages/Register';
-import ForgotPassword from 'pages/ForgotPassword';
-import ResetPassword from 'pages/ResetPassword';
+import Topbar from 'components/Topbar';
+import Home from 'pages/Home';
 
-const App = () => {
-  return (
+const App = () => (
+  <>
+    <Topbar />
     <Router>
       <Switch>
-        <Route exact path="/" render={Main} />
-        <Route path="/login" render={Login} />
-        <Route path="/register" render={Register} />
-        <Route path="/forgot-password" render={ForgotPassword} />
-        <Route path="/reset-password" render={ResetPassword} />
+        <Route exact path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
-  );
-};
+  </>
+);
 
 export default App;

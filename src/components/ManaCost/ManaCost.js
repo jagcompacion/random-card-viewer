@@ -1,5 +1,4 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
 
 const ManaCost = ({ manaCost }) => {
   if (!manaCost) return null;

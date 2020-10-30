@@ -1,12 +1,13 @@
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
+import { LoadingContainer } from './styles';
 
 const Loading = () => (
-  <div className="text-center">
+  <LoadingContainer className="text-center d-flex justify-content-center align-items-center">
     <Spinner animation="border" role="loading">
       <span className="sr-only">Loading...</span>
     </Spinner>
-  </div>
+  </LoadingContainer>
 );
 
 export default Loading;

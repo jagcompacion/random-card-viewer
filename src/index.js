@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'contexts/ThemeContext';
+import GlobalStyles from 'components/GlobalStyles';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'mana-font/css/mana.css';
 import App from './App';
@@ -7,7 +9,10 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <GlobalStyles />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
